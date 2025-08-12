@@ -565,6 +565,11 @@ $(H3 $(LNAME2 agregate_member_offsets, Struct/Union/Class Member Offsets))
         }
         --------------
 
+    $(P NB: When moving pointers into registers, Ensure the pointer size matches the register width.
+    EBX being a 32-bits register expects a 32 bits pointer size.
+    if the pointer is 64 bits, use RBX instead to avoid size errors.
+    )
+
     $(P Alternatively, inside the scope of an aggregate, only the member name is needed:)
 
         --------------
